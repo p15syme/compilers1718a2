@@ -8,11 +8,6 @@ Stmt_list -> Stmt Stmt_list
 Stmt -> id = Expr 
      | print Expr.
 Expr -> Term Term_tail.
-Stmt_list -> Stmt Stmt_list
-          |.
-Stmt -> id = Expr 
-     | print Expr.
-Expr -> Term Term_tail.
 Term_tail -> Aoop Term Term_tail
           |.
 Term -> Factor Factor_tail.
