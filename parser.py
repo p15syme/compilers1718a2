@@ -104,7 +104,7 @@ class MyParser:
 		return self.scanner.read()
 	
 	def stmt_list(self):
-		if self.la == 'IDENTIFIER':
+		if self.la == 'IDENTIFIER' or self.la == 'print':
 			self.stmt()
 			self.stmt_list()
 		elif self.la is None:
