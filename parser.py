@@ -23,7 +23,7 @@ Nop -> not.
 
 FIRST sets:
 ------------
-Stmt_list: id print
+Stmt_list: id 
 Stmt: id print
 Expr: (Expr) id tf01
 Term_tail: and or
@@ -104,7 +104,7 @@ class MyParser:
 		return self.scanner.read()
 	
 	def stmt_list(self):
-		if self.la == 'IDENTIFIER' or self.la == 'print':
+		if self.la == 'IDENTIFIER':
 			self.stmt()
 			self.stmt_list()
 		elif self.la is None:
